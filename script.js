@@ -14,20 +14,45 @@ const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 const hamburger = document.getElementById("hamburger");
 
+// Debug: Check if elements exist
+console.log("🔍 Mobile Menu Debug:");
+console.log(
+  "Mobile toggle button:",
+  mobileMenuToggle ? "✅ Found" : "❌ Not found"
+);
+console.log("Nav menu:", navMenu ? "✅ Found" : "❌ Not found");
+console.log("Hamburger:", hamburger ? "✅ Found" : "❌ Not found");
+
 // Toggle mobile menu
 if (mobileMenuToggle) {
   mobileMenuToggle.addEventListener("click", function (e) {
     e.stopPropagation();
+
+    // Debug logging
+    console.log("🍔 Hamburger clicked!");
+    console.log("Current menu classes:", navMenu.className);
+
     navMenu.classList.toggle("mobile-open");
     hamburger.classList.toggle("active");
+
+    // Debug logging
+    console.log("New menu classes:", navMenu.className);
+    console.log(
+      "Menu is now:",
+      navMenu.classList.contains("mobile-open") ? "OPEN" : "CLOSED"
+    );
 
     // Prevent body scroll when menu is open
     if (navMenu.classList.contains("mobile-open")) {
       document.body.style.overflow = "hidden";
+      console.log("✅ Body scroll locked");
     } else {
       document.body.style.overflow = "";
+      console.log("✅ Body scroll restored");
     }
   });
+} else {
+  console.error("❌ Mobile menu toggle button not found!");
 }
 
 // Close mobile menu when clicking on a link
