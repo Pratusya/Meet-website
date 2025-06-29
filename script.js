@@ -48,11 +48,7 @@ document.addEventListener("click", function (e) {
 
 // Close mobile menu on escape key
 document.addEventListener("keydown", function (e) {
-  if (
-    e.key === "Escape" &&
-    navMenu &&
-    navMenu.classList.contains("mobile-open")
-  ) {
+  if (e.key === "Escape" && navMenu && navMenu.classList.contains("mobile-open")) {
     navMenu.classList.remove("mobile-open");
     hamburger.classList.remove("active");
   }
@@ -89,7 +85,7 @@ if (scrollToTopBtn) {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   });
 }
@@ -110,10 +106,8 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all cards for animation
-document.addEventListener("DOMContentLoaded", function () {
-  const cards = document.querySelectorAll(
-    ".service-card, .feature-card, .stat-item, .contact-item"
-  );
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll(".service-card, .feature-card, .stat-item, .contact-item");
   cards.forEach((card) => {
     card.style.opacity = "0";
     card.style.transform = "translateY(30px)";
@@ -123,19 +117,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Enhanced click effects with ripple
-document
-  .querySelectorAll(
-    ".btn-primary, .btn-secondary, .service-card, .feature-card"
-  )
-  .forEach((element) => {
-    element.addEventListener("click", function (e) {
-      const ripple = document.createElement("span");
-      const rect = this.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      const x = e.clientX - rect.left - size / 2;
-      const y = e.clientY - rect.top - size / 2;
+document.querySelectorAll(".btn-primary, .btn-secondary, .service-card, .feature-card").forEach((element) => {
+  element.addEventListener("click", function (e) {
+    const ripple = document.createElement("span");
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
 
-      ripple.style.cssText = `
+    ripple.style.cssText = `
       position: absolute;
       width: ${size}px;
       height: ${size}px;
@@ -149,13 +139,13 @@ document
       z-index: 10;
     `;
 
-      this.style.position = "relative";
-      this.style.overflow = "hidden";
-      this.appendChild(ripple);
+    this.style.position = "relative";
+    this.style.overflow = "hidden";
+    this.appendChild(ripple);
 
-      setTimeout(() => ripple.remove(), 600);
-    });
+    setTimeout(() => ripple.remove(), 600);
   });
+});
 
 // CSS animation for ripple effect
 const style = document.createElement("style");
@@ -172,13 +162,11 @@ document.head.appendChild(style);
 // Image error handling
 document.addEventListener("DOMContentLoaded", function () {
   // Handle logo images
-  document
-    .querySelectorAll(".logo-image, .footer-logo-image")
-    .forEach((img) => {
-      img.onerror = function () {
-        this.style.display = "none";
-        const fallback = document.createElement("div");
-        fallback.style.cssText = `
+  document.querySelectorAll(".logo-image, .footer-logo-image").forEach((img) => {
+    img.onerror = function () {
+      this.style.display = "none";
+      const fallback = document.createElement("div");
+      fallback.style.cssText = `
         font-size: 24px; 
         font-weight: 800; 
         color: #dc2626; 
@@ -190,10 +178,10 @@ document.addEventListener("DOMContentLoaded", function () {
         background: #f8fafc;
         border-radius: 12px;
       `;
-        fallback.textContent = "GP";
-        this.parentNode.appendChild(fallback);
-      };
-    });
+      fallback.textContent = "GP";
+      this.parentNode.appendChild(fallback);
+    };
+  });
 
   // Handle CNC machine image
   const heroMachineImg = document.querySelector(".hero-machine-image");
@@ -218,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Responsive utilities
 function handleResize() {
   const isMobile = window.innerWidth <= 768;
-
+  
   // Adjust mobile menu behavior
   if (!isMobile && navMenu && navMenu.classList.contains("mobile-open")) {
     navMenu.classList.remove("mobile-open");
@@ -238,7 +226,7 @@ if (scrollToTopBtn) {
 // Performance optimization: Debounce scroll events
 let scrollTimeout;
 function debounceScroll(func, delay) {
-  return function () {
+  return function() {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(func, delay);
   };
@@ -249,9 +237,7 @@ const debouncedScrollHandler = debounceScroll(() => {
   const scrolled = window.scrollY > 300;
   if (scrollToTopBtn) {
     scrollToTopBtn.style.opacity = scrolled ? "1" : "0";
-    scrollToTopBtn.style.transform = scrolled
-      ? "translateY(0)"
-      : "translateY(100px)";
+    scrollToTopBtn.style.transform = scrolled ? "translateY(0)" : "translateY(100px)";
   }
 }, 10);
 
