@@ -241,7 +241,8 @@ html {
   flex-wrap: wrap;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 16px 32px;
   border-radius: 12px;
   font-size: 16px;
@@ -329,8 +330,15 @@ html {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.2); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
 }
 
 .status-text {
@@ -834,8 +842,12 @@ html {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive Design */
@@ -846,7 +858,7 @@ html {
     max-width: 1200px;
     padding: 0 40px;
   }
-  
+
   .hero-container {
     max-width: 1200px;
     padding: 0 40px;
@@ -858,25 +870,25 @@ html {
   .nav-container {
     padding: 0 20px;
   }
-  
+
   .hero-container {
     gap: 40px;
   }
-  
+
   .hero-image {
     height: 350px;
   }
-  
+
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
   }
-  
+
   .features-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -888,79 +900,80 @@ html {
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .nav-menu {
     display: none;
   }
-  
+
   .logo-text {
     font-size: 16px;
   }
-  
+
   .logo-icon {
     width: 50px;
     height: 50px;
   }
-  
+
   .hero-container {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
   }
-  
+
   .hero-image {
     height: 300px;
   }
-  
+
   .hero-buttons {
     justify-content: center;
   }
-  
-  .btn-primary, .btn-secondary {
+
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
     max-width: 300px;
     justify-content: center;
   }
-  
+
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
-  
+
   .contact-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .workshop-showcase {
     height: 200px;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
     text-align: center;
   }
-  
+
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .footer-links {
     justify-content: center;
   }
-  
+
   .section {
     padding: 60px 0;
   }
@@ -971,85 +984,88 @@ html {
   .container {
     padding: 0 15px;
   }
-  
+
   .nav-container {
     padding: 0 15px;
   }
-  
+
   .hero-container {
     padding: 0 15px;
   }
-  
+
   .logo-text {
     font-size: 14px;
   }
-  
-  .logo-icon, .logo-icon-footer {
+
+  .logo-icon,
+  .logo-icon-footer {
     width: 45px;
     height: 45px;
   }
-  
+
   .hero-image {
     height: 250px;
   }
-  
+
   .cutting-indicator {
     padding: 8px 16px;
     font-size: 12px;
   }
-  
+
   .status-text {
     font-size: 12px;
   }
-  
+
   .about-stats {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .stat-item {
     padding: 20px 15px;
   }
-  
-  .service-card, .feature-card {
+
+  .service-card,
+  .feature-card {
     padding: 30px 20px;
   }
-  
-  .service-icon, .feature-icon {
+
+  .service-icon,
+  .feature-icon {
     width: 60px;
     height: 60px;
     font-size: 24px;
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .contact-item {
     padding: 15px;
     flex-direction: column;
     text-align: center;
     gap: 10px;
   }
-  
+
   .contact-icon {
     width: 40px;
     height: 40px;
     font-size: 16px;
   }
-  
+
   .footer-logo {
     flex-direction: column;
     text-align: center;
     gap: 10px;
   }
-  
+
   .footer-links {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .scroll-to-top {
     width: 45px;
     height: 45px;
@@ -1057,7 +1073,7 @@ html {
     right: 20px;
     font-size: 18px;
   }
-  
+
   .section {
     padding: 50px 0;
   }
@@ -1068,26 +1084,28 @@ html {
   .container {
     padding: 0 10px;
   }
-  
-  .nav-container, .hero-container {
+
+  .nav-container,
+  .hero-container {
     padding: 0 10px;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
   }
-  
-  .btn-primary, .btn-secondary {
+
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
     padding: 14px 24px;
     font-size: 14px;
   }
-  
+
   .hero-image {
     height: 200px;
   }
-  
+
   .section {
     padding: 40px 0;
   }
