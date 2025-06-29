@@ -20,15 +20,23 @@ if (mobileMenuToggle) {
     e.stopPropagation();
     navMenu.classList.toggle("mobile-open");
     hamburger.classList.toggle("active");
+
+    // Prevent body scroll when menu is open
+    if (navMenu.classList.contains("mobile-open")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
   });
 }
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", function () {
-    if (navMenu.classList.contains("mobile-open")) {
+    if (navMenu && navMenu.classList.contains("mobile-open")) {
       navMenu.classList.remove("mobile-open");
       hamburger.classList.remove("active");
+      document.body.style.overflow = "";
     }
   });
 });
@@ -43,6 +51,7 @@ document.addEventListener("click", function (e) {
   ) {
     navMenu.classList.remove("mobile-open");
     hamburger.classList.remove("active");
+    document.body.style.overflow = "";
   }
 });
 
@@ -55,6 +64,31 @@ document.addEventListener("keydown", function (e) {
   ) {
     navMenu.classList.remove("mobile-open");
     hamburger.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+});
+
+// Handle window resize - close mobile menu on desktop
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 768) {
+    if (navMenu && navMenu.classList.contains("mobile-open")) {
+      navMenu.classList.remove("mobile-open");
+      hamburger.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  }
+});
+
+// Close mobile menu on escape key
+document.addEventListener("keydown", function (e) {
+  if (
+    e.key === "Escape" &&
+    navMenu &&
+    navMenu.classList.contains("mobile-open")
+  ) {
+    navMenu.classList.remove("mobile-open");
+    hamburger.classList.remove("active");
+    document.body.style.overflow = "";
   }
 });
 
