@@ -3,131 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gujarat Profil - Leading provider of precision profile cutting solutions, CNC machine services, and industrial cutting expertise."
+    />
+    <meta
+      name="keywords"
+      content="profile cutting, CNC services, industrial cutting, precision cutting, Gujarat Profil"
+    />
+    <meta name="author" content="Gujarat Profil" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <title>Gujarat Profil - Precision Profile Cutting Solutions</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-      <div class="spinner"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <a href="#home" class="logo">
-          <div class="logo-icon">
-            <img
-              src="Images/logo.jpg"
-              alt="Gujarat Profil Logo"
-              class="logo-image"
-            />
-          </div>
-          <div class="logo-text">
-            GUJARAT<br />
-            <span style="font-size: 14px">PROFIL</span>
-          </div>
-        </a>
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
+        <div class="nav-logo">
+          <img
+            src="logo.jpg"
+            alt="Gujarat Profil - Precision Profile Cutting Solutions"
+            class="logo-img"
+          />
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#why-choose" class="nav-link">Why Choose Us</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
-      <div class="hero-bg"></div>
-      <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+        <img
+          src="CNC.jpg"
+          alt="Precision CNC Cutting Machine"
+          class="hero-bg-img"
+        />
       </div>
-      <div class="cutting-sparks">
-        <div class="spark"></div>
-        <div class="spark"></div>
-        <div class="spark"></div>
-      </div>
-
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="hero-badge">⚡ Advanced Manufacturing Solutions</div>
-          <h1 class="hero-title">
-            Precision <span>Profile</span><br />
-            Cutting Solutions
-          </h1>
-          <p class="hero-subtitle">
-            Delivering exceptional quality and precision in profile cutting
-            services with state-of-the-art technology and expert craftsmanship.
-          </p>
-          <div class="hero-buttons">
-            <a href="#services" class="btn-primary"> Explore Services → </a>
-            <a href="#contact" class="btn-secondary"> Get Quote </a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-image">
-            <img
-              src="Images/CNC.jpg"
-              alt="CNC Profile Cutting Machine in Action"
-              class="hero-machine-image"
-            />
-            <div class="hero-image-overlay">
-              <div class="cutting-indicator">
-                <span class="status-dot"></span>
-                <span class="status-text">Precision Cutting Active</span>
-              </div>
+      <div class="hero-content">
+        <div class="container">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="title-line">PRECISION PROFILE</span>
+              <span class="title-line accent">CUTTING SOLUTIONS</span>
+            </h1>
+            <p class="hero-subtitle">
+              Delivering high-quality provider of high-quality services and
+              expertise.
+            </p>
+            <div class="hero-buttons">
+              <a href="#services" class="btn btn-primary">
+                <span>READ MORE</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>GET QUOTE</span>
+                <i class="fas fa-phone"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section class="section about-section" id="about">
+    <section id="about" class="about">
       <div class="container">
         <div class="about-content">
-          <div>
-            <div class="section-badge">🏭 About Gujarat Profil</div>
-            <h2 class="section-title">
-              Excellence in Industrial Manufacturing
-            </h2>
-            <p class="about-text">
-              Welcome to Gujarat Profil, your trusted partner for high-quality
-              profile cutting services and industrial solutions. We combine
-              advanced machinery with skilled expertise to deliver precision
-              results for all your manufacturing needs.
+          <div class="about-text">
+            <div class="section-header">
+              <h2 class="section-title">ABOUT US</h2>
+              <div class="section-line"></div>
+            </div>
+            <p class="about-description">
+              Welcome to Gujarat Profil Your provider of high-quality profile
+              services and preaterilvis to advanced makchines and skilled
+              operators.
             </p>
-            <p class="about-text">
-              Our commitment to quality, innovation, and customer satisfaction
-              has made us a leading provider in the industry, serving clients
-              across various sectors with reliable and efficient solutions.
-            </p>
-            <div class="about-stats">
-              <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Projects Completed</div>
+            <div class="about-features">
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Advanced CNC Technology</span>
               </div>
-              <div class="stat-item">
-                <div class="stat-number">15+</div>
-                <div class="stat-label">Years Experience</div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Skilled Technicians</span>
               </div>
-              <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Client Satisfaction</div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Quality Assurance</span>
               </div>
-              <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Support Available</div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Timely Delivery</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">
+              <span>READ MORE</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="about-image">
+            <div class="image-container">
+              <img
+                src="about us.jpg"
+                alt="Advanced CNC Cutting Process"
+                class="about-img"
+              />
+              <div class="image-overlay">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -136,129 +155,164 @@
     </section>
 
     <!-- Services Section -->
-    <section class="section" id="services">
+    <section id="services" class="services">
       <div class="container">
-        <div class="section-header">
-          <div class="section-badge">⚙️ Our Services</div>
-          <h2 class="section-title">Comprehensive Industrial Solutions</h2>
+        <div class="section-header centered">
+          <h2 class="section-title">OUR SERVICES</h2>
           <p class="section-subtitle">
-            We provide a complete range of manufacturing and industrial services
-            tailored to meet your specific requirements with precision and
-            efficiency.
+            We provide a comprehensive range of industrial services tailored to
+            meet your specific needs
           </p>
+          <div class="section-line"></div>
         </div>
 
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">🔧</div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
             <h3 class="service-title">Profile Cutting</h3>
             <p class="service-description">
-              Precision profile cutting services using advanced CNC machines for
-              various materials including steel, aluminum, and specialty alloys.
+              Precision profile cutting services using advanced technology for
+              perfect results every time.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <a href="#contact" class="service-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
 
-          <div class="service-card">
-            <div class="service-icon">⚙️</div>
-            <h3 class="service-title">Custom Fabrication</h3>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3 class="service-title">CNC Machine Services</h3>
             <p class="service-description">
-              Tailored fabrication solutions for industrial components,
-              architectural elements, and specialized manufacturing
-              requirements.
+              State-of-the-art CNC machining services for complex industrial
+              applications and requirements.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <a href="#contact" class="service-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
 
-          <div class="service-card">
-            <div class="service-icon">🎯</div>
-            <h3 class="service-title">Precision Engineering</h3>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-hand-paper"></i>
+            </div>
+            <h3 class="service-title">Manual Cutting</h3>
             <p class="service-description">
-              High-precision engineering services with strict quality control
-              and dimensional accuracy for critical applications.
+              Expert manual cutting services for specialized projects requiring
+              human precision and care.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <a href="#contact" class="service-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
 
-          <div class="service-card">
-            <div class="service-icon">🏭</div>
-            <h3 class="service-title">Industrial Solutions</h3>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3 class="service-title">MS Pipe & Plate Sales</h3>
             <p class="service-description">
-              Comprehensive industrial manufacturing solutions including design
-              consultation, prototyping, and mass production.
+              High-quality MS pipes and plates available for all your industrial
+              construction needs.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <a href="#contact" class="service-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
 
-          <div class="service-card">
-            <div class="service-icon">⚡</div>
-            <h3 class="service-title">Fast Turnaround</h3>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="service-title">Diesel Generator</h3>
             <p class="service-description">
-              Quick delivery times without compromising quality, ensuring your
-              projects stay on schedule and within budget.
+              Reliable diesel generator solutions for uninterrupted power supply
+              in industrial operations.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <a href="#contact" class="service-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
 
-          <div class="service-card">
-            <div class="service-icon">✓</div>
-            <h3 class="service-title">Quality Assurance</h3>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-icon">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <h3 class="service-title">Scrap Collection</h3>
             <p class="service-description">
-              Rigorous quality control processes and testing procedures to
-              ensure every product meets the highest standards.
+              Efficient scrap collection and recycling services supporting
+              sustainable industrial practices.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <a href="#contact" class="service-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="section features-section">
+    <!-- Why Choose Us Section -->
+    <section id="why-choose" class="why-choose">
       <div class="container">
-        <div class="section-header">
-          <div class="section-badge">✨ Why Choose Us</div>
-          <h2 class="section-title">Advanced Manufacturing Capabilities</h2>
+        <div class="section-header centered">
+          <h2 class="section-title">WHY CHOOSE US</h2>
           <p class="section-subtitle">
-            Our state-of-the-art facility and experienced team deliver
-            exceptional results across all manufacturing disciplines.
+            Our commitment to excellence sets us apart in the industry
           </p>
+          <div class="section-line"></div>
         </div>
 
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🎯</div>
-            <h3 class="feature-title">Precision Technology</h3>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="feature-title">Quality Assurance</h3>
             <p class="feature-description">
-              Latest CNC machines and cutting-edge technology ensure
-              millimeter-perfect accuracy in every project.
+              Rigorous quality control processes ensure every project meets the
+              highest standards.
             </p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3 class="feature-title">Expert Craftsmen</h3>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="feature-title">Timely Delivery</h3>
             <p class="feature-description">
-              Skilled professionals with decades of experience in industrial
-              manufacturing and quality control.
+              We respect deadlines and ensure prompt delivery without
+              compromising quality.
             </p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h3 class="feature-title">Fast Delivery</h3>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="feature-title">Custom Solutions</h3>
             <p class="feature-description">
-              Streamlined processes and efficient workflows ensure quick
-              turnaround times for all projects.
+              Tailored solutions designed to meet your specific industrial
+              requirements.
             </p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🔒</div>
-            <h3 class="feature-title">Quality Guarantee</h3>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="feature-title">Skilled Team</h3>
             <p class="feature-description">
-              Comprehensive quality assurance with detailed testing and
-              certification for every manufactured component.
+              Experienced professionals dedicated to delivering exceptional
+              results.
             </p>
           </div>
         </div>
@@ -266,62 +320,77 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
+    <section id="contact" class="contact">
       <div class="container">
-        <div class="section-header">
-          <div class="section-badge">📞 Get In Touch</div>
-          <h2 class="section-title">Ready to Start Your Project?</h2>
+        <div class="section-header centered">
+          <h2 class="section-title">GET IN TOUCH</h2>
           <p class="section-subtitle">
-            Contact us today for a consultation and quote. We're here to help
-            bring your manufacturing vision to life.
+            Ready to start your project? Contact us today for a consultation
           </p>
+          <div class="section-line"></div>
         </div>
 
         <div class="contact-content">
           <div class="contact-info">
-            <h3>Let's Discuss Your Requirements</h3>
-            <p>
-              Whether you need precision cutting, custom fabrication, or
-              industrial solutions, our team is ready to provide expert guidance
-              and exceptional service.
-            </p>
-
-            <div class="contact-details">
-              <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                  <h4>Visit Our Facility</h4>
-                  <p>Industrial Area, Ahmedabad, Gujarat, India</p>
-                </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <div>
-                  <h4>Call Us</h4>
-                  <p>+91 99999 00000</p>
-                </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Gujarat, India</p>
               </div>
+            </div>
 
-              <div class="contact-item">
-                <div class="contact-icon">✉️</div>
-                <div>
-                  <h4>Email Us</h4>
-                  <p>info@gujaratprofil.com</p>
-                </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
               </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>+91 XXX XXX XXXX</p>
+              </div>
+            </div>
 
-              <div class="contact-item">
-                <div class="contact-icon">⏰</div>
-                <div>
-                  <h4>Working Hours</h4>
-                  <p>Mon-Sat: 9:00 AM - 6:00 PM</p>
-                </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>info@gujaratprofil.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Working Hours</h4>
+                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
               </div>
             </div>
           </div>
 
-          <div class="workshop-showcase"></div>
+          <div class="contact-image-container">
+            <div class="industrial-image-wrapper">
+              <img
+                src="industrai.jpg"
+                alt="Gujarat Profil Industrial Facility - Advanced Manufacturing Setup"
+                class="industrial-facility-img"
+              />
+              <div class="image-overlay">
+                <div class="facility-info">
+                  <h4>Our State-of-the-Art Facility</h4>
+                  <p>
+                    Advanced CNC machines and skilled operators working together
+                    to deliver precision results
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -330,75 +399,87 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <div class="footer-section">
-            <div class="footer-logo">
-              <div class="logo-icon-footer">
-                <img
-                  src="Images/logo.jpg"
-                  alt="Gujarat Profil Logo"
-                  class="footer-logo-image"
-                />
-              </div>
-              <div class="footer-logo-text">
-                <span class="company-name">GUJARAT PROFIL</span>
-                <span class="tagline">Precision Manufacturing Excellence</span>
-              </div>
-            </div>
+          <div class="footer-logo">
+            <img src="logo.jpg" alt="Gujarat Profil" class="footer-logo-img" />
             <p class="footer-description">
-              Leading provider of precision profile cutting and industrial
-              manufacturing solutions with over 15 years of excellence in the
-              industry.
+              Leading provider of precision profile cutting solutions and
+              industrial services.
             </p>
           </div>
 
-          <div class="footer-section">
-            <h4>Services</h4>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-services">
+            <h4>Our Services</h4>
             <ul>
               <li><a href="#services">Profile Cutting</a></li>
-              <li><a href="#services">Custom Fabrication</a></li>
-              <li><a href="#services">Precision Engineering</a></li>
-              <li><a href="#services">Industrial Solutions</a></li>
+              <li><a href="#services">CNC Services</a></li>
+              <li><a href="#services">Manual Cutting</a></li>
+              <li><a href="#services">MS Pipe & Plate</a></li>
             </ul>
           </div>
 
-          <div class="footer-section">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#contact">Get Quote</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-section">
-            <h4>Connect</h4>
-            <div class="social-links">
-              <a href="#" class="social-link">📱</a>
-              <a href="#" class="social-link">📧</a>
-              <a href="#" class="social-link">🌐</a>
+          <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Gujarat, India</span>
             </div>
-            <div class="footer-contact">
-              <p>📞 +91 XXX XXX XXXX</p>
-              <p>✉️ info@gujaratprofil.com</p>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 XXX XXX XXXX</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@gujaratprofil.com</span>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <div class="footer-bottom-content">
+          <div class="footer-copyright">
             <p>&copy; 2025 Gujarat Profil. All rights reserved.</p>
-            <div class="footer-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-            </div>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
     </footer>
 
-    <a href="#top" class="scroll-to-top" id="scroll-to-top">↑</a>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
 
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+      <div class="loading-content">
+        <img src="logo.jpg" alt="Gujarat Profil" class="loading-logo" />
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
