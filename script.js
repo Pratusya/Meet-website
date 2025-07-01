@@ -716,19 +716,33 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 });
 
-// Service Worker Registration (for PWA capabilities)
+// Service Worker Registration (Progressive Web App capabilities)
+// Uncomment the code below if you want PWA features like offline caching
+/*
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
-        console.log("SW registered: ", registration);
+        console.log("Service Worker registered successfully:", registration.scope);
+        
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // New content is available
+              console.log('New content available! Please refresh.');
+            }
+          });
+        });
       })
-      .catch((registrationError) => {
-        console.log("SW registration failed: ", registrationError);
+      .catch((error) => {
+        console.log("Service Worker registration failed:", error);
       });
   });
 }
+*/
 
 // Performance monitoring
 if ("PerformanceObserver" in window) {
