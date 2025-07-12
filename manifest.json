@@ -1,0 +1,36 @@
+{
+  "name": "Gujarat Profil - Precision Profile Cutting Solutions",
+  "short_name": "Gujarat Profil",
+  "description": "Leading provider of precision profile cutting solutions, CNC machine services, and industrial cutting expertise.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": ["business", "industrial", "manufacturing"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "Images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "Images/CNC.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Gujarat Profil CNC Services"
+    }
+  ]
+}
