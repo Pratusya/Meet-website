@@ -36,6 +36,7 @@ class GujaratProfilWebsite {
     this.initLoadingScreen();
     this.initBackToTop();
     this.initGallery(); // Add gallery initialization
+    this.initMap(); // Add map initialization
 
     // Performance optimized event listeners
     this.setupOptimizedListeners();
@@ -405,6 +406,26 @@ class GujaratProfilWebsite {
     });
   }
 
+  // Map Initialization
+  initMap() {
+    const mapWrapper = document.querySelector(".map-wrapper");
+    const iframe = mapWrapper?.querySelector("iframe");
+
+    if (mapWrapper && iframe) {
+      // Remove loading state when iframe loads
+      iframe.addEventListener("load", () => {
+        setTimeout(() => {
+          mapWrapper.classList.add("loaded");
+        }, 1000); // Small delay to ensure map is fully rendered
+      });
+
+      // Also handle error case
+      iframe.addEventListener("error", () => {
+        mapWrapper.classList.add("loaded");
+      });
+    }
+  }
+
   // Performance Optimized Event Listeners
   setupOptimizedListeners() {
     // Lazy load images
@@ -554,7 +575,7 @@ class GujaratProfilWebsite {
   initGallery() {
     this.galleryData = this.loadGalleryData();
     this.currentPage = 1;
-    this.itemsPerPage = 9;
+    this.itemsPerPage = 12; // Show all items on one page
     this.searchQuery = "";
 
     this.setupGallerySearch();
@@ -565,227 +586,96 @@ class GujaratProfilWebsite {
 
   loadGalleryData() {
     return [
-      // Equipment Images
+      // Main Products - Single Images Only
       {
         id: 1,
-        src: "Images/CNC.jpg",
-        alt: "CNC Machine - Precision Cutting Technology",
-        title: "CNC Machine",
+        src: "Images/profile cutting/profile cuting.jfif",
+        alt: "Profile Cutting Service",
+        title: "Profile Cutting",
         description:
-          "State-of-the-art CNC machine for precision cutting operations",
-        category: "equipment",
-        tags: ["cnc", "cutting", "precision", "machine"],
+          "High-precision profile cutting solutions for various industrial applications",
+        category: "products",
+        tags: ["profile", "cutting", "precision", "industrial"],
       },
       {
         id: 2,
-        src: "Images/about us.jpg",
-        alt: "Gujarat Profil Facility",
-        title: "Our Facility",
-        description: "Advanced manufacturing setup with modern equipment",
-        category: "equipment",
-        tags: ["facility", "manufacturing", "workshop"],
+        src: "Images/press machine/1.jpeg",
+        alt: "Press Machine",
+        title: "Press Machine",
+        description:
+          "Industrial-grade press machines for metal forming and shaping operations",
+        category: "products",
+        tags: ["press", "metal", "forming", "machine"],
       },
       {
         id: 3,
-        src: "Images/industrai.jpg",
-        alt: "Industrial Equipment",
-        title: "Industrial Equipment",
-        description: "Heavy duty machinery for industrial applications",
-        category: "equipment",
-        tags: ["industrial", "heavy", "machinery"],
+        src: "Images/scarp pipes/1.jpeg",
+        alt: "Profile Cutting Scrap",
+        title: "Profile Cutting Scrap",
+        description:
+          "Quality metal scraps from profile cutting operations for recycling",
+        category: "products",
+        tags: ["scrap", "recycling", "metal", "cutting"],
       },
       {
         id: 4,
-        src: "Images/ms plates.jpg",
-        alt: "MS Steel Plates",
-        title: "MS Steel Plates",
-        description: "High quality mild steel plates for construction",
-        category: "equipment",
-        tags: ["steel", "plates", "construction", "ms"],
+        src: "Images/CNC.jpg",
+        alt: "CNC Machine",
+        title: "CNC Machine",
+        description:
+          "State-of-the-art CNC machines for precision manufacturing and cutting",
+        category: "products",
+        tags: ["cnc", "cutting", "precision", "machine"],
       },
-      // Generator Images
       {
         id: 5,
         src: "Images/genrator/1.jpeg",
-        alt: "Generator Unit 1",
-        title: "Generator Unit 1",
-        description: "Diesel power generation unit for industrial use",
-        category: "generators",
+        alt: "Diesel Generator",
+        title: "Diesel Generator",
+        description:
+          "Reliable diesel generators for continuous power supply in industrial settings",
+        category: "products",
         tags: ["generator", "diesel", "power", "industrial"],
       },
       {
         id: 6,
-        src: "Images/genrator/2.jpeg",
-        alt: "Generator Unit 2",
-        title: "Generator Unit 2",
-        description: "Industrial power solutions for continuous operation",
-        category: "generators",
-        tags: ["generator", "power", "continuous", "industrial"],
+        src: "Images/Ms scrap/ms scrap.jfif",
+        alt: "MS Scrap",
+        title: "MS Scrap",
+        description:
+          "High-quality mild steel scrap materials for recycling and industrial applications",
+        category: "products",
+        tags: ["ms", "scrap", "steel", "recycling"],
       },
       {
         id: 7,
-        src: "Images/genrator/3.jpeg",
-        alt: "Generator Unit 3",
-        title: "Generator Unit 3",
-        description: "Heavy duty generators for large scale operations",
-        category: "generators",
-        tags: ["generator", "heavy", "large", "scale"],
+        src: "Images/ms plates.jpg",
+        alt: "MS Plate",
+        title: "MS Plate",
+        description:
+          "High-quality mild steel plates in various sizes for construction projects",
+        category: "products",
+        tags: ["ms", "plate", "steel", "construction"],
       },
       {
         id: 8,
-        src: "Images/genrator/4.jpeg",
-        alt: "Generator Unit 4",
-        title: "Generator Unit 4",
-        description: "Backup power systems for emergency situations",
-        category: "generators",
-        tags: ["generator", "backup", "emergency", "power"],
+        src: "Images/scarp pipes/2.jpeg",
+        alt: "MS Pipe",
+        title: "MS Pipe",
+        description:
+          "Durable mild steel pipes for plumbing and structural applications",
+        category: "products",
+        tags: ["ms", "pipe", "steel", "plumbing"],
       },
       {
         id: 9,
-        src: "Images/genrator/5.jpeg",
-        alt: "Generator Unit 5",
-        title: "Generator Unit 5",
-        description: "Advanced generator technology for efficient power",
-        category: "generators",
-        tags: ["generator", "advanced", "efficient", "technology"],
-      },
-      {
-        id: 10,
-        src: "Images/genrator/6.jpeg",
-        alt: "Generator Unit 6",
-        title: "Generator Unit 6",
-        description: "Portable generator units for flexible power supply",
-        category: "generators",
-        tags: ["generator", "portable", "flexible", "mobile"],
-      },
-      {
-        id: 11,
-        src: "Images/genrator/7.jpeg",
-        alt: "Generator Unit 7",
-        title: "Generator Unit 7",
-        description: "High capacity generators for industrial complexes",
-        category: "generators",
-        tags: ["generator", "high", "capacity", "complex"],
-      },
-      {
-        id: 12,
-        src: "Images/genrator/8.jpeg",
-        alt: "Generator Unit 8",
-        title: "Generator Unit 8",
-        description: "Silent generators for noise-sensitive environments",
-        category: "generators",
-        tags: ["generator", "silent", "quiet", "environment"],
-      },
-      // Press Machine Images
-      {
-        id: 13,
-        src: "Images/press machine/1.jpeg",
-        alt: "Press Machine 1",
-        title: "Press Machine 1",
-        description: "Metal forming equipment for precision pressing",
-        category: "press-machines",
-        tags: ["press", "metal", "forming", "precision"],
-      },
-      {
-        id: 14,
-        src: "Images/press machine/2.jpeg",
-        alt: "Press Machine 2",
-        title: "Press Machine 2",
-        description: "Industrial press solutions for heavy duty work",
-        category: "press-machines",
-        tags: ["press", "industrial", "heavy", "duty"],
-      },
-      {
-        id: 15,
-        src: "Images/press machine/3.jpeg",
-        alt: "Press Machine 3",
-        title: "Press Machine 3",
-        description: "Heavy duty press equipment for large components",
-        category: "press-machines",
-        tags: ["press", "heavy", "large", "components"],
-      },
-      {
-        id: 16,
-        src: "Images/press machine/4.jpeg",
-        alt: "Press Machine 4",
-        title: "Press Machine 4",
-        description: "Advanced press technology for complex operations",
-        category: "press-machines",
-        tags: ["press", "advanced", "complex", "technology"],
-      },
-      // Motor Scrap Images
-      {
-        id: 17,
         src: "Images/motor scrap/motor.jpg",
-        alt: "Motor Scrap Collection",
+        alt: "Motor Scrap",
         title: "Motor Scrap",
-        description: "Scrap collection services for motor recycling",
-        category: "motor-scrap",
-        tags: ["motor", "scrap", "recycling", "collection"],
-      },
-      {
-        id: 18,
-        src: "Images/motor scrap/motor 2.jpg",
-        alt: "Motor Scrap Processing",
-        title: "Motor Scrap Processing",
-        description: "Professional motor scrap processing and recycling",
-        category: "motor-scrap",
-        tags: ["motor", "processing", "recycling", "professional"],
-      },
-      {
-        id: 19,
-        src: "Images/motor scrap/motor 3.jpg",
-        alt: "Motor Scrap Operations",
-        title: "Motor Scrap Operations",
-        description: "Industrial motor scrap recycling operations",
-        category: "motor-scrap",
-        tags: ["motor", "industrial", "operations", "recycling"],
-      },
-      {
-        id: 20,
-        src: "Images/motor scrap/motor 4.jpg",
-        alt: "Motor Scrap Management",
-        title: "Motor Scrap Management",
-        description: "Sustainable motor scrap management solutions",
-        category: "motor-scrap",
-        tags: ["motor", "sustainable", "management", "solutions"],
-      },
-      // Scrap Pipes Images
-      {
-        id: 21,
-        src: "Images/scarp pipes/1.jpeg",
-        alt: "Scrap Pipes Collection 1",
-        title: "Scrap Pipes",
-        description: "Metal pipe recycling and collection services",
-        category: "pipes",
-        tags: ["pipes", "metal", "recycling", "collection"],
-      },
-      {
-        id: 22,
-        src: "Images/scarp pipes/2.jpeg",
-        alt: "Scrap Pipes Collection 2",
-        title: "Pipe Materials",
-        description: "Industrial pipe supplies and materials",
-        category: "pipes",
-        tags: ["pipes", "industrial", "supplies", "materials"],
-      },
-      {
-        id: 23,
-        src: "Images/scarp pipes/3.jpeg",
-        alt: "Scrap Pipes Collection 3",
-        title: "Pipe Processing",
-        description: "Metal pipe processing and fabrication",
-        category: "pipes",
-        tags: ["pipes", "processing", "fabrication", "metal"],
-      },
-      {
-        id: 24,
-        src: "Images/scarp pipes/4.jpeg",
-        alt: "Scrap Pipes Collection 4",
-        title: "Industrial Pipes",
-        description: "Industrial pipe manufacturing and supply",
-        category: "pipes",
-        tags: ["pipes", "industrial", "manufacturing", "supply"],
+        description:
+          "Motor scrap collection and recycling services for sustainable practices",
+        category: "products",
+        tags: ["motor", "scrap", "recycling", "sustainable"],
       },
     ];
   }
@@ -1012,13 +902,9 @@ class GujaratProfilWebsite {
 
   getCategoryName(category) {
     const categoryNames = {
-      equipment: "Equipment",
-      generators: "Generators",
-      "press-machines": "Press Machines",
-      "motor-scrap": "Motor Scrap",
-      pipes: "Scrap Pipes",
+      products: "Our Products",
     };
-    return categoryNames[category] || "Other";
+    return categoryNames[category] || "Products";
   }
 
   openLightbox(index) {

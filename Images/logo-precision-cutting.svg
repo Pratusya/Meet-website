@@ -1,0 +1,90 @@
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="precisionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D336B"/>
+      <stop offset="50%" stop-color="#7886C7"/>
+      <stop offset="100%" stop-color="#A9B5DF"/>
+    </linearGradient>
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D336B"/>
+      <stop offset="100%" stop-color="#7886C7"/>
+    </linearGradient>
+    <filter id="precisionShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Precision measurement frame -->
+  <rect x="25" y="25" width="70" height="70" fill="none" stroke="#A9B5DF" stroke-width="1" opacity="0.4"/>
+  <rect x="30" y="30" width="60" height="60" fill="none" stroke="#7886C7" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Precision cutting symbol -->
+  <g transform="translate(60, 60)" filter="url(#precisionShadow)">
+    <!-- Main cutting disc -->
+    <circle cx="0" cy="0" r="22" fill="url(#precisionGradient)" stroke="#FFF2F2" stroke-width="1.5"/>
+    
+    <!-- Cutting teeth around the edge -->
+    <g fill="#FFF2F2">
+      <!-- Top teeth -->
+      <rect x="-2" y="-24" width="4" height="4" rx="1"/>
+      <rect x="-6" y="-23" width="3" height="3" rx="0.5" transform="rotate(45)"/>
+      <rect x="3" y="-23" width="3" height="3" rx="0.5" transform="rotate(-45)"/>
+      
+      <!-- Right teeth -->
+      <rect x="20" y="-2" width="4" height="4" rx="1"/>
+      <rect x="19" y="-6" width="3" height="3" rx="0.5" transform="rotate(45)"/>
+      <rect x="19" y="3" width="3" height="3" rx="0.5" transform="rotate(-45)"/>
+      
+      <!-- Bottom teeth -->
+      <rect x="-2" y="20" width="4" height="4" rx="1"/>
+      <rect x="-6" y="19" width="3" height="3" rx="0.5" transform="rotate(45)"/>
+      <rect x="3" y="19" width="3" height="3" rx="0.5" transform="rotate(-45)"/>
+      
+      <!-- Left teeth -->
+      <rect x="-24" y="-2" width="4" height="4" rx="1"/>
+      <rect x="-23" y="-6" width="3" height="3" rx="0.5" transform="rotate(45)"/>
+      <rect x="-23" y="3" width="3" height="3" rx="0.5" transform="rotate(-45)"/>
+    </g>
+    
+    <!-- Center hub -->
+    <circle cx="0" cy="0" r="8" fill="#2D336B"/>
+    <circle cx="0" cy="0" r="4" fill="#FFF2F2"/>
+    
+    <!-- Precision cross-hairs -->
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#FFF2F2" stroke-width="1"/>
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#FFF2F2" stroke-width="1"/>
+    
+    <!-- Measurement marks -->
+    <g stroke="#FFF2F2" stroke-width="0.5" opacity="0.7">
+      <line x1="-15" y1="-2" x2="-15" y2="2"/>
+      <line x1="15" y1="-2" x2="15" y2="2"/>
+      <line x1="-2" y1="-15" x2="2" y2="-15"/>
+      <line x1="-2" y1="15" x2="2" y2="15"/>
+    </g>
+  </g>
+  
+  <!-- Company name -->
+  <text x="135" y="40" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="url(#nameGradient)">
+    GUJARAT
+  </text>
+  <text x="135" y="70" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#7886C7">
+    PROFILE
+  </text>
+  
+  <!-- Precision tagline -->
+  <text x="135" y="88" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#A9B5DF" letter-spacing="1px">
+    PRECISION CUTTING SOLUTIONS
+  </text>
+  
+  <!-- Technical accent -->
+  <line x1="135" y1="74" x2="275" y2="74" stroke="#A9B5DF" stroke-width="2"/>
+  <circle cx="275" cy="74" r="2" fill="#A9B5DF"/>
+  
+  <!-- Measurement indicators -->
+  <g transform="translate(270, 30)" stroke="#7886C7" stroke-width="1" fill="none">
+    <rect x="0" y="0" width="8" height="8" rx="1"/>
+    <line x1="2" y1="2" x2="6" y2="6"/>
+    <line x1="2" y1="6" x2="6" y2="2"/>
+  </g>
+</svg>

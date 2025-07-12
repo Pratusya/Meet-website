@@ -259,8 +259,9 @@ p {
 }
 
 .loading-logo {
-  width: 100px;
+  width: 150px; /* Increased from 100px */
   height: auto;
+  max-width: 300px; /* Added max width */
   margin-bottom: var(--spacing-lg);
   animation: loadingPulse 2s ease-in-out infinite;
   filter: drop-shadow(0 4px 12px rgba(41, 128, 185, 0.3));
@@ -316,9 +317,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-xs) var(--container-padding);
+  padding: calc(var(--spacing-xs) * 0.75) var(--container-padding);
   max-width: var(--container-max-width);
   margin: 0 auto;
+  height: 70px; /* Increased height slightly */
+  min-height: 70px; /* Ensure consistent height */
 }
 
 .nav-logo {
@@ -326,6 +329,9 @@ p {
   padding: calc(var(--spacing-xs) * 0.5);
   border-radius: 8px;
   transition: all var(--transition-medium);
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-logo:hover {
@@ -338,8 +344,9 @@ p {
 }
 
 .logo-img {
-  height: 40px;
+  height: 50px; /* Increased slightly from 45px */
   width: auto;
+  max-width: 220px; /* Increased max width slightly */
   transition: all var(--transition-medium);
   filter: drop-shadow(0 2px 8px var(--shadow-light));
   border-radius: 8px;
@@ -393,10 +400,13 @@ p {
   cursor: pointer;
   padding: calc(var(--spacing-xs) * 0.5);
   gap: 3px;
-  min-width: 36px;
-  min-height: 36px;
+  min-width: 40px;
+  min-height: 40px;
   justify-content: center;
   align-items: center;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-medium);
+  flex-shrink: 0;
 }
 
 .bar {
@@ -1030,10 +1040,12 @@ p {
   font-size: var(--font-size-lg);
   z-index: 1;
   transition: opacity var(--transition-medium);
+  animation: mapPulse 2s ease-in-out infinite;
 }
 
-.map-wrapper iframe:not([src=""]) + ::before {
+.map-wrapper.loaded::before {
   opacity: 0;
+  visibility: hidden;
 }
 
 .map-overlay {
@@ -1082,10 +1094,6 @@ p {
   }
 }
 
-.map-wrapper::before {
-  animation: mapPulse 2s ease-in-out infinite;
-}
-
 /* Footer */
 .footer {
   background: var(--primary-color);
@@ -1102,8 +1110,9 @@ p {
 }
 
 .footer-logo-img {
-  height: 60px;
+  height: 80px; /* Increased from 60px */
   width: auto;
+  max-width: 280px; /* Added max width */
   margin-bottom: var(--spacing-md);
   filter: drop-shadow(0 2px 8px rgba(41, 128, 185, 0.3));
   border-radius: 8px;
@@ -1517,7 +1526,8 @@ p {
 /* Tablet Portrait (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .logo-img {
-    height: 36px;
+    height: 50px; /* Increased from 36px */
+    max-width: 220px;
   }
 
   .hero-buttons {
@@ -1677,10 +1687,25 @@ p {
 
   .nav-toggle {
     display: flex;
+    margin-right: 0; /* Ensure no extra margin */
+  }
+
+  .nav-container {
+    height: 60px; /* Slightly smaller on mobile */
+    min-height: 60px;
+    padding: var(--spacing-xs) var(--container-padding);
+    align-items: center; /* Ensure perfect vertical alignment */
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove padding on mobile for better alignment */
   }
 
   .logo-img {
-    height: 32px;
+    height: 45px; /* Increased from 32px */
+    max-width: 200px;
   }
 
   .hero {
@@ -1872,10 +1897,25 @@ p {
 
   .nav-toggle {
     display: flex;
+    margin-right: 0;
+  }
+
+  .nav-container {
+    height: 55px; /* Even smaller on very small screens */
+    min-height: 55px;
+    padding: calc(var(--spacing-xs) * 0.75) var(--container-padding);
+    align-items: center; /* Perfect vertical alignment */
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove padding for exact alignment */
   }
 
   .logo-img {
-    height: 28px;
+    height: 40px; /* Increased from 28px */
+    max-width: 180px;
   }
 
   .hero {
