@@ -75,6 +75,7 @@ class GujaratProfilWebsite {
   initNavigation() {
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("nav-menu");
+    const navOverlay = document.getElementById("nav-overlay");
     const navLinks = document.querySelectorAll(".nav-link");
     const navbar = document.getElementById("navbar");
 
@@ -82,6 +83,13 @@ class GujaratProfilWebsite {
       navToggle.addEventListener("click", () => {
         this.toggleMobileMenu(navToggle, navMenu);
       });
+
+      // Close mobile menu when clicking on overlay
+      if (navOverlay) {
+        navOverlay.addEventListener("click", () => {
+          this.toggleMobileMenu(navToggle, navMenu);
+        });
+      }
 
       // Close mobile menu when clicking on links
       navLinks.forEach((link) => {
@@ -114,8 +122,14 @@ class GujaratProfilWebsite {
   }
 
   toggleMobileMenu(toggle, menu) {
+    const overlay = document.getElementById("nav-overlay");
+
     toggle.classList.toggle("active");
     menu.classList.toggle("active");
+
+    if (overlay) {
+      overlay.classList.toggle("active");
+    }
 
     // Prevent body scroll when menu is open
     if (menu.classList.contains("active")) {
